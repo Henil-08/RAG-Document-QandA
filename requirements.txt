@@ -6,3 +6,6 @@ langchain
 python-dotenv
 langchain_core
 langchain_groq
+pypdf
+langchain_huggingface
+faiss-cpu
