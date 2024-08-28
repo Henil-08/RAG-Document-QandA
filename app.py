@@ -15,13 +15,12 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-api_key = st.secrets("GROQ_API_KEY")
-
 ## load the GROQ and HF API Key
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
+os.environ['GROQ_API_KEY']=st.secrets["GROQ_API_KEY"]
 
 ## Loading the Model
-llm = ChatGroq(model_name="llama-3.1-70b-versatile", api_key = api_key)
+llm = ChatGroq(model_name="llama-3.1-70b-versatile")
 
 ## Getting the embeddings
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
