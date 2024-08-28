@@ -17,7 +17,7 @@ load_dotenv()
 
 ## load the GROQ and HF API Key
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
-os.environ['GROQ_API_KEY']=os.getenv("GROQ_API_KEY")
+os.environ['GROQ_API_KEY']=st.secrets("GROQ_API")
 
 ## Loading the Model
 llm = ChatGroq(model_name="Llama3-8b-8192")
