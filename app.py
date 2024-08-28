@@ -15,11 +15,11 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-st.write("DB username:", st.secrets["GROQ_API"])
+
 
 ## load the GROQ and HF API Key
 os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
-os.environ['GROQ_API_KEY']=st.secrets("GROQ_API")
+os.environ['GROQ_API_KEY']=st.secrets("GROQ_API_KEY")
 
 ## Loading the Model
 llm = ChatGroq(model_name="llama-3.1-70b-versatile")
